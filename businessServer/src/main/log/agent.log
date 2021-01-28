@@ -1,0 +1,910 @@
+2019-04-04 11:42:00,196   INFO --- [                             localhost-startStop-1]  org.springframework.web.context.ContextLoader                                   (line:   305)  :  Root WebApplicationContext: initialization started
+2019-04-04 11:42:00,284   INFO --- [                             localhost-startStop-1]  org.springframework.web.context.support.XmlWebApplicationContext                (line:   582)  :  Refreshing Root WebApplicationContext: startup date [Thu Apr 04 11:42:00 CST 2019]; root of context hierarchy
+2019-04-04 11:42:00,334   INFO --- [                             localhost-startStop-1]  org.springframework.beans.factory.xml.XmlBeanDefinitionReader                   (line:   317)  :  Loading XML bean definitions from class path resource [application.xml]
+2019-04-04 11:42:01,421   INFO --- [                             localhost-startStop-1]  org.springframework.context.support.PropertySourcesPlaceholderConfigurer        (line:   172)  :  Loading properties file from class path resource [recommend.properties]
+2019-04-04 11:42:01,449   INFO --- [                             localhost-startStop-1]  org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor(line:   155)  :  JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2019-04-04 11:42:03,769   INFO --- [                             localhost-startStop-1]  org.mongodb.driver.cluster                                                      (line:    71)  :  Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2019-04-04 11:42:03,917   INFO --- [cluster-ClusterId{value='5ca57d0bf8d24a327c866cbf', description='null'}-localhost:27017]  org.mongodb.driver.connection                                                   (line:    71)  :  Opened connection [connectionId{localValue:1, serverValue:197}] to localhost:27017
+2019-04-04 11:42:03,941   INFO --- [cluster-ClusterId{value='5ca57d0bf8d24a327c866cbf', description='null'}-localhost:27017]  org.mongodb.driver.cluster                                                      (line:    71)  :  Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 4, 9]}, minWireVersion=0, maxWireVersion=5, maxDocumentSize=16777216, roundTripTimeNanos=9055000}
+2019-04-04 11:42:10,400   INFO --- [                             localhost-startStop-1]  org.springframework.web.context.ContextLoader                                   (line:   345)  :  Root WebApplicationContext: initialization completed in 10201 ms
+2019-04-04 11:42:10,469   INFO --- [                             localhost-startStop-1]  org.springframework.web.servlet.DispatcherServlet                               (line:   489)  :  FrameworkServlet 'recommend': initialization started
+2019-04-04 11:42:10,474   INFO --- [                             localhost-startStop-1]  org.springframework.web.context.support.XmlWebApplicationContext                (line:   582)  :  Refreshing WebApplicationContext for namespace 'recommend-servlet': startup date [Thu Apr 04 11:42:10 CST 2019]; parent: Root WebApplicationContext
+2019-04-04 11:42:10,475   INFO --- [                             localhost-startStop-1]  org.springframework.beans.factory.xml.XmlBeanDefinitionReader                   (line:   317)  :  Loading XML bean definitions from ServletContext resource [/WEB-INF/application-servlet.xml]
+2019-04-04 11:42:10,900   INFO --- [                             localhost-startStop-1]  org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor(line:   155)  :  JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2019-04-04 11:42:11,577   INFO --- [                             localhost-startStop-1]  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping(line:   543)  :  Mapped "{[/rest/movie/rate/{id}],methods=[GET],produces=[application/json]}" onto public org.springframework.ui.Model com.atguigu.business.rest.MovieRestApi.rateToMovie(int,java.lang.Double,java.lang.String,org.springframework.ui.Model)
+2019-04-04 11:42:11,579   INFO --- [                             localhost-startStop-1]  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping(line:   543)  :  Mapped "{[/rest/movie/stat],methods=[GET],produces=[application/json]}" onto public org.springframework.ui.Model com.atguigu.business.rest.MovieRestApi.getMyRatingStat(java.lang.String,org.springframework.ui.Model)
+2019-04-04 11:42:11,581   INFO --- [                             localhost-startStop-1]  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping(line:   543)  :  Mapped "{[/rest/movie/myrate],methods=[GET],produces=[application/json]}" onto public org.springframework.ui.Model com.atguigu.business.rest.MovieRestApi.getMyRateMovies(java.lang.String,org.springframework.ui.Model)
+2019-04-04 11:42:11,584   INFO --- [                             localhost-startStop-1]  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping(line:   543)  :  Mapped "{[/rest/movie/search],methods=[GET],produces=[application/json]}" onto public org.springframework.ui.Model com.atguigu.business.rest.MovieRestApi.getSearchMovies(java.lang.String,org.springframework.ui.Model)
+2019-04-04 11:42:11,585   INFO --- [                             localhost-startStop-1]  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping(line:   543)  :  Mapped "{[/rest/movie/hot],methods=[GET],produces=[application/json]}" onto public org.springframework.ui.Model com.atguigu.business.rest.MovieRestApi.getHotMovies(int,org.springframework.ui.Model)
+2019-04-04 11:42:11,586   INFO --- [                             localhost-startStop-1]  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping(line:   543)  :  Mapped "{[/rest/movie/new],methods=[GET],produces=[application/json]}" onto public org.springframework.ui.Model com.atguigu.business.rest.MovieRestApi.getNewMovies(int,org.springframework.ui.Model)
+2019-04-04 11:42:11,586   INFO --- [                             localhost-startStop-1]  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping(line:   543)  :  Mapped "{[/rest/movie/newtag/{mid}],methods=[GET],produces=[application/json]}" onto public org.springframework.ui.Model com.atguigu.business.rest.MovieRestApi.addMyTags(int,java.lang.String,java.lang.String,org.springframework.ui.Model)
+2019-04-04 11:42:11,587   INFO --- [                             localhost-startStop-1]  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping(line:   543)  :  Mapped "{[/rest/movie/genres],methods=[GET],produces=[application/json]}" onto public org.springframework.ui.Model com.atguigu.business.rest.MovieRestApi.getGenresMovies(java.lang.String,org.springframework.ui.Model)
+2019-04-04 11:42:11,587   INFO --- [                             localhost-startStop-1]  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping(line:   543)  :  Mapped "{[/rest/movie/info/{id}],methods=[GET],produces=[application/json]}" onto public org.springframework.ui.Model com.atguigu.business.rest.MovieRestApi.getMovieInfo(int,org.springframework.ui.Model)
+2019-04-04 11:42:11,588   INFO --- [                             localhost-startStop-1]  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping(line:   543)  :  Mapped "{[/rest/movie/wish],methods=[GET],produces=[application/json]}" onto public org.springframework.ui.Model com.atguigu.business.rest.MovieRestApi.getWishMovies(java.lang.String,int,org.springframework.ui.Model)
+2019-04-04 11:42:11,589   INFO --- [                             localhost-startStop-1]  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping(line:   543)  :  Mapped "{[/rest/movie/tag/{mid}],methods=[GET],produces=[application/json]}" onto public org.springframework.ui.Model com.atguigu.business.rest.MovieRestApi.getMovieTags(int,org.springframework.ui.Model)
+2019-04-04 11:42:11,590   INFO --- [                             localhost-startStop-1]  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping(line:   543)  :  Mapped "{[/rest/movie/guess],methods=[GET],produces=[application/json]}" onto public org.springframework.ui.Model com.atguigu.business.rest.MovieRestApi.getGuessMovies(java.lang.String,int,org.springframework.ui.Model)
+2019-04-04 11:42:11,591   INFO --- [                             localhost-startStop-1]  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping(line:   543)  :  Mapped "{[/rest/movie/mytag/{mid}],methods=[GET],produces=[application/json]}" onto public org.springframework.ui.Model com.atguigu.business.rest.MovieRestApi.getMyTags(int,java.lang.String,org.springframework.ui.Model)
+2019-04-04 11:42:11,592   INFO --- [                             localhost-startStop-1]  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping(line:   543)  :  Mapped "{[/rest/movie/same/{id}],methods=[GET],produces=[application/json]}" onto public org.springframework.ui.Model com.atguigu.business.rest.MovieRestApi.getSameMovie(int,int,org.springframework.ui.Model)
+2019-04-04 11:42:11,592   INFO --- [                             localhost-startStop-1]  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping(line:   543)  :  Mapped "{[/rest/movie/rate],methods=[GET],produces=[application/json]}" onto public org.springframework.ui.Model com.atguigu.business.rest.MovieRestApi.getRateMoreMovies(int,org.springframework.ui.Model)
+2019-04-04 11:42:11,600   INFO --- [                             localhost-startStop-1]  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping(line:   543)  :  Mapped "{[/rest/users/register],methods=[GET],produces=[application/json]}" onto public org.springframework.ui.Model com.atguigu.business.rest.UserRestApi.addUser(java.lang.String,java.lang.String,org.springframework.ui.Model)
+2019-04-04 11:42:11,601   INFO --- [                             localhost-startStop-1]  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping(line:   543)  :  Mapped "{[/rest/users/login],methods=[GET],produces=[application/json]}" onto public org.springframework.ui.Model com.atguigu.business.rest.UserRestApi.login(java.lang.String,java.lang.String,org.springframework.ui.Model)
+2019-04-04 11:42:11,602   INFO --- [                             localhost-startStop-1]  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping(line:   543)  :  Mapped "{[/rest/users/pref],methods=[GET],produces=[application/json]}" onto public org.springframework.ui.Model com.atguigu.business.rest.UserRestApi.addPrefGenres(java.lang.String,java.lang.String,org.springframework.ui.Model)
+2019-04-04 11:42:12,677   INFO --- [                             localhost-startStop-1]  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter(line:   534)  :  Looking for @ControllerAdvice: WebApplicationContext for namespace 'recommend-servlet': startup date [Thu Apr 04 11:42:10 CST 2019]; parent: Root WebApplicationContext
+2019-04-04 11:42:12,924   INFO --- [                             localhost-startStop-1]  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter(line:   534)  :  Looking for @ControllerAdvice: WebApplicationContext for namespace 'recommend-servlet': startup date [Thu Apr 04 11:42:10 CST 2019]; parent: Root WebApplicationContext
+2019-04-04 11:42:13,205   INFO --- [                             localhost-startStop-1]  org.springframework.web.servlet.handler.SimpleUrlHandlerMapping                 (line:   354)  :  Mapped URL path [/**] onto handler 'org.springframework.web.servlet.resource.DefaultServletHttpRequestHandler#0'
+2019-04-04 11:42:13,415   INFO --- [                             localhost-startStop-1]  org.springframework.web.servlet.DispatcherServlet                               (line:   508)  :  FrameworkServlet 'recommend': initialization completed in 2945 ms
+2019-04-04 11:42:53,745   INFO --- [                              http-bio-8088-exec-9]  org.mongodb.driver.connection                                                   (line:    71)  :  Opened connection [connectionId{localValue:2, serverValue:198}] to localhost:27017
+2019-04-04 11:42:56,888   INFO --- [                              http-bio-8088-exec-4]  org.mongodb.driver.connection                                                   (line:    71)  :  Opened connection [connectionId{localValue:3, serverValue:199}] to localhost:27017
+2019-04-04 11:42:56,898   INFO --- [                              http-bio-8088-exec-1]  org.mongodb.driver.connection                                                   (line:    71)  :  Opened connection [connectionId{localValue:4, serverValue:200}] to localhost:27017
+2019-04-04 11:42:56,902   INFO --- [                              http-bio-8088-exec-7]  org.mongodb.driver.connection                                                   (line:    71)  :  Opened connection [connectionId{localValue:5, serverValue:201}] to localhost:27017
+2019-04-04 11:42:56,913   INFO --- [                              http-bio-8088-exec-3]  org.mongodb.driver.connection                                                   (line:    71)  :  Opened connection [connectionId{localValue:6, serverValue:202}] to localhost:27017
+2019-04-04 11:48:09,489   INFO --- [                              http-bio-8088-exec-5]  com.atguigu.business.rest.MovieRestApi                                          (line:   207)  :  MOVIE_RATING_PREFIX:2018522823|106471|5.0|1554349689
+2019-04-04 11:51:44,862   INFO --- [                              http-bio-8088-exec-6]  com.atguigu.business.rest.MovieRestApi                                          (line:   207)  :  MOVIE_RATING_PREFIX:2018522823|260|5.0|1554349904
+2020-12-24 00:05:08,704   INFO --- [                             localhost-startStop-1]  org.springframework.web.context.ContextLoader                                   (line:   305)  :  Root WebApplicationContext: initialization started
+2020-12-24 00:05:08,833   INFO --- [                             localhost-startStop-1]  org.springframework.web.context.support.XmlWebApplicationContext                (line:   582)  :  Refreshing Root WebApplicationContext: startup date [Thu Dec 24 00:05:08 EST 2020]; root of context hierarchy
+2020-12-24 00:05:09,174   INFO --- [                             localhost-startStop-1]  org.springframework.beans.factory.xml.XmlBeanDefinitionReader                   (line:   317)  :  Loading XML bean definitions from class path resource [application.xml]
+2020-12-24 00:05:11,307   INFO --- [                             localhost-startStop-1]  org.springframework.context.support.PropertySourcesPlaceholderConfigurer        (line:   172)  :  Loading properties file from class path resource [recommend.properties]
+2020-12-24 00:05:11,341   INFO --- [                             localhost-startStop-1]  org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor(line:   155)  :  JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2020-12-24 00:05:13,224   INFO --- [                             localhost-startStop-1]  org.mongodb.driver.cluster                                                      (line:    71)  :  Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2020-12-24 00:05:13,854   INFO --- [cluster-ClusterId{value='5fe421892cb18ec4d02e10f2', description='null'}-localhost:27017]  org.mongodb.driver.connection                                                   (line:    71)  :  Opened connection [connectionId{localValue:1, serverValue:141}] to localhost:27017
+2020-12-24 00:05:13,888   INFO --- [cluster-ClusterId{value='5fe421892cb18ec4d02e10f2', description='null'}-localhost:27017]  org.mongodb.driver.cluster                                                      (line:    71)  :  Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[4, 2, 8]}, minWireVersion=0, maxWireVersion=8, maxDocumentSize=16777216, roundTripTimeNanos=4470458}
+2020-12-24 00:05:24,318   INFO --- [                             localhost-startStop-1]  org.springframework.web.context.ContextLoader                                   (line:   345)  :  Root WebApplicationContext: initialization completed in 15600 ms
+2020-12-24 00:05:24,517   INFO --- [                             localhost-startStop-1]  org.springframework.web.servlet.DispatcherServlet                               (line:   489)  :  FrameworkServlet 'recommend': initialization started
+2020-12-24 00:05:24,532   INFO --- [                             localhost-startStop-1]  org.springframework.web.context.support.XmlWebApplicationContext                (line:   582)  :  Refreshing WebApplicationContext for namespace 'recommend-servlet': startup date [Thu Dec 24 00:05:24 EST 2020]; parent: Root WebApplicationContext
+2020-12-24 00:05:24,534   INFO --- [                             localhost-startStop-1]  org.springframework.beans.factory.xml.XmlBeanDefinitionReader                   (line:   317)  :  Loading XML bean definitions from ServletContext resource [/WEB-INF/application-servlet.xml]
+2020-12-24 00:05:24,934   INFO --- [                             localhost-startStop-1]  org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor(line:   155)  :  JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2020-12-24 00:05:26,518   INFO --- [                             localhost-startStop-1]  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping(line:   543)  :  Mapped "{[/rest/movie/genres],methods=[GET],produces=[application/json]}" onto public org.springframework.ui.Model com.atguigu.business.rest.MovieRestApi.getGenresMovies(java.lang.String,org.springframework.ui.Model)
+2020-12-24 00:05:26,520   INFO --- [                             localhost-startStop-1]  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping(line:   543)  :  Mapped "{[/rest/movie/myrate],methods=[GET],produces=[application/json]}" onto public org.springframework.ui.Model com.atguigu.business.rest.MovieRestApi.getMyRateMovies(java.lang.String,org.springframework.ui.Model)
+2020-12-24 00:05:26,522   INFO --- [                             localhost-startStop-1]  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping(line:   543)  :  Mapped "{[/rest/movie/rate/{id}],methods=[GET],produces=[application/json]}" onto public org.springframework.ui.Model com.atguigu.business.rest.MovieRestApi.rateToMovie(int,java.lang.Double,java.lang.String,org.springframework.ui.Model)
+2020-12-24 00:05:26,529   INFO --- [                             localhost-startStop-1]  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping(line:   543)  :  Mapped "{[/rest/movie/info/{id}],methods=[GET],produces=[application/json]}" onto public org.springframework.ui.Model com.atguigu.business.rest.MovieRestApi.getMovieInfo(int,org.springframework.ui.Model)
+2020-12-24 00:05:26,530   INFO --- [                             localhost-startStop-1]  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping(line:   543)  :  Mapped "{[/rest/movie/search],methods=[GET],produces=[application/json]}" onto public org.springframework.ui.Model com.atguigu.business.rest.MovieRestApi.getSearchMovies(java.lang.String,org.springframework.ui.Model)
+2020-12-24 00:05:26,531   INFO --- [                             localhost-startStop-1]  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping(line:   543)  :  Mapped "{[/rest/movie/tag/{mid}],methods=[GET],produces=[application/json]}" onto public org.springframework.ui.Model com.atguigu.business.rest.MovieRestApi.getMovieTags(int,org.springframework.ui.Model)
+2020-12-24 00:05:26,533   INFO --- [                             localhost-startStop-1]  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping(line:   543)  :  Mapped "{[/rest/movie/mytag/{mid}],methods=[GET],produces=[application/json]}" onto public org.springframework.ui.Model com.atguigu.business.rest.MovieRestApi.getMyTags(int,java.lang.String,org.springframework.ui.Model)
+2020-12-24 00:05:26,536   INFO --- [                             localhost-startStop-1]  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping(line:   543)  :  Mapped "{[/rest/movie/newtag/{mid}],methods=[GET],produces=[application/json]}" onto public org.springframework.ui.Model com.atguigu.business.rest.MovieRestApi.addMyTags(int,java.lang.String,java.lang.String,org.springframework.ui.Model)
+2020-12-24 00:05:26,543   INFO --- [                             localhost-startStop-1]  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping(line:   543)  :  Mapped "{[/rest/movie/stat],methods=[GET],produces=[application/json]}" onto public org.springframework.ui.Model com.atguigu.business.rest.MovieRestApi.getMyRatingStat(java.lang.String,org.springframework.ui.Model)
+2020-12-24 00:05:26,553   INFO --- [                             localhost-startStop-1]  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping(line:   543)  :  Mapped "{[/rest/movie/guess],methods=[GET],produces=[application/json]}" onto public org.springframework.ui.Model com.atguigu.business.rest.MovieRestApi.getGuessMovies(java.lang.String,int,org.springframework.ui.Model)
+2020-12-24 00:05:26,555   INFO --- [                             localhost-startStop-1]  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping(line:   543)  :  Mapped "{[/rest/movie/wish],methods=[GET],produces=[application/json]}" onto public org.springframework.ui.Model com.atguigu.business.rest.MovieRestApi.getWishMovies(java.lang.String,int,org.springframework.ui.Model)
+2020-12-24 00:05:26,556   INFO --- [                             localhost-startStop-1]  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping(line:   543)  :  Mapped "{[/rest/movie/hot],methods=[GET],produces=[application/json]}" onto public org.springframework.ui.Model com.atguigu.business.rest.MovieRestApi.getHotMovies(int,org.springframework.ui.Model)
+2020-12-24 00:05:26,557   INFO --- [                             localhost-startStop-1]  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping(line:   543)  :  Mapped "{[/rest/movie/rate],methods=[GET],produces=[application/json]}" onto public org.springframework.ui.Model com.atguigu.business.rest.MovieRestApi.getRateMoreMovies(int,org.springframework.ui.Model)
+2020-12-24 00:05:26,560   INFO --- [                             localhost-startStop-1]  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping(line:   543)  :  Mapped "{[/rest/movie/new],methods=[GET],produces=[application/json]}" onto public org.springframework.ui.Model com.atguigu.business.rest.MovieRestApi.getNewMovies(int,org.springframework.ui.Model)
+2020-12-24 00:05:26,564   INFO --- [                             localhost-startStop-1]  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping(line:   543)  :  Mapped "{[/rest/movie/same/{id}],methods=[GET],produces=[application/json]}" onto public org.springframework.ui.Model com.atguigu.business.rest.MovieRestApi.getSameMovie(int,int,org.springframework.ui.Model)
+2020-12-24 00:05:26,574   INFO --- [                             localhost-startStop-1]  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping(line:   543)  :  Mapped "{[/rest/users/register],methods=[GET],produces=[application/json]}" onto public org.springframework.ui.Model com.atguigu.business.rest.UserRestApi.addUser(java.lang.String,java.lang.String,org.springframework.ui.Model)
+2020-12-24 00:05:26,577   INFO --- [                             localhost-startStop-1]  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping(line:   543)  :  Mapped "{[/rest/users/login],methods=[GET],produces=[application/json]}" onto public org.springframework.ui.Model com.atguigu.business.rest.UserRestApi.login(java.lang.String,java.lang.String,org.springframework.ui.Model)
+2020-12-24 00:05:26,579   INFO --- [                             localhost-startStop-1]  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping(line:   543)  :  Mapped "{[/rest/users/pref],methods=[GET],produces=[application/json]}" onto public org.springframework.ui.Model com.atguigu.business.rest.UserRestApi.addPrefGenres(java.lang.String,java.lang.String,org.springframework.ui.Model)
+2020-12-24 00:05:28,896   INFO --- [                             localhost-startStop-1]  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter(line:   534)  :  Looking for @ControllerAdvice: WebApplicationContext for namespace 'recommend-servlet': startup date [Thu Dec 24 00:05:24 EST 2020]; parent: Root WebApplicationContext
+2020-12-24 00:05:29,156   INFO --- [                             localhost-startStop-1]  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter(line:   534)  :  Looking for @ControllerAdvice: WebApplicationContext for namespace 'recommend-servlet': startup date [Thu Dec 24 00:05:24 EST 2020]; parent: Root WebApplicationContext
+2020-12-24 00:05:29,541   INFO --- [                             localhost-startStop-1]  org.springframework.web.servlet.handler.SimpleUrlHandlerMapping                 (line:   354)  :  Mapped URL path [/**] onto handler 'org.springframework.web.servlet.resource.DefaultServletHttpRequestHandler#0'
+2020-12-24 00:05:29,673   INFO --- [                             localhost-startStop-1]  org.springframework.web.servlet.DispatcherServlet                               (line:   508)  :  FrameworkServlet 'recommend': initialization completed in 5155 ms
+2020-12-24 00:07:28,847   INFO --- [                              http-bio-8088-exec-3]  org.mongodb.driver.connection                                                   (line:    71)  :  Opened connection [connectionId{localValue:2, serverValue:142}] to localhost:27017
+2020-12-24 00:07:37,333   INFO --- [                              http-bio-8088-exec-7]  org.mongodb.driver.connection                                                   (line:    71)  :  Opened connection [connectionId{localValue:4, serverValue:144}] to localhost:27017
+2020-12-24 00:07:37,353   INFO --- [                              http-bio-8088-exec-2]  org.mongodb.driver.connection                                                   (line:    71)  :  Opened connection [connectionId{localValue:3, serverValue:143}] to localhost:27017
+2020-12-24 00:07:37,353   INFO --- [                              http-bio-8088-exec-1]  org.mongodb.driver.connection                                                   (line:    71)  :  Opened connection [connectionId{localValue:5, serverValue:145}] to localhost:27017
+2020-12-24 00:07:37,356   INFO --- [                              http-bio-8088-exec-5]  org.mongodb.driver.connection                                                   (line:    71)  :  Opened connection [connectionId{localValue:6, serverValue:146}] to localhost:27017
+2020-12-24 00:34:11,604   INFO --- [ContainerBackgroundProcessor[StandardEngine[Tomcat]]]  org.springframework.web.context.support.XmlWebApplicationContext                (line:   987)  :  Closing WebApplicationContext for namespace 'recommend-servlet': startup date [Thu Dec 24 00:05:24 EST 2020]; parent: Root WebApplicationContext
+2020-12-24 00:34:11,716   INFO --- [ContainerBackgroundProcessor[StandardEngine[Tomcat]]]  org.springframework.web.context.support.XmlWebApplicationContext                (line:   987)  :  Closing Root WebApplicationContext: startup date [Thu Dec 24 00:05:08 EST 2020]; root of context hierarchy
+2020-12-24 00:34:13,410   INFO --- [ContainerBackgroundProcessor[StandardEngine[Tomcat]]]  org.mongodb.driver.connection                                                   (line:    71)  :  Closed connection [connectionId{localValue:5, serverValue:145}] to localhost:27017 because the pool has been closed.
+2020-12-24 00:34:13,416   INFO --- [ContainerBackgroundProcessor[StandardEngine[Tomcat]]]  org.mongodb.driver.connection                                                   (line:    71)  :  Closed connection [connectionId{localValue:2, serverValue:142}] to localhost:27017 because the pool has been closed.
+2020-12-24 00:34:13,417   INFO --- [ContainerBackgroundProcessor[StandardEngine[Tomcat]]]  org.mongodb.driver.connection                                                   (line:    71)  :  Closed connection [connectionId{localValue:4, serverValue:144}] to localhost:27017 because the pool has been closed.
+2020-12-24 00:34:13,418   INFO --- [ContainerBackgroundProcessor[StandardEngine[Tomcat]]]  org.mongodb.driver.connection                                                   (line:    71)  :  Closed connection [connectionId{localValue:3, serverValue:143}] to localhost:27017 because the pool has been closed.
+2020-12-24 00:34:13,419   INFO --- [ContainerBackgroundProcessor[StandardEngine[Tomcat]]]  org.mongodb.driver.connection                                                   (line:    71)  :  Closed connection [connectionId{localValue:6, serverValue:146}] to localhost:27017 because the pool has been closed.
+2020-12-24 00:34:36,538   INFO --- [ContainerBackgroundProcessor[StandardEngine[Tomcat]]]  org.springframework.web.context.ContextLoader                                   (line:   305)  :  Root WebApplicationContext: initialization started
+2020-12-24 00:34:36,816   INFO --- [ContainerBackgroundProcessor[StandardEngine[Tomcat]]]  org.springframework.web.context.support.XmlWebApplicationContext                (line:   582)  :  Refreshing Root WebApplicationContext: startup date [Thu Dec 24 00:34:36 EST 2020]; root of context hierarchy
+2020-12-24 00:34:36,958   INFO --- [ContainerBackgroundProcessor[StandardEngine[Tomcat]]]  org.springframework.beans.factory.xml.XmlBeanDefinitionReader                   (line:   317)  :  Loading XML bean definitions from class path resource [application.xml]
+2020-12-24 00:34:37,174   INFO --- [                             localhost-startStop-1]  org.springframework.web.context.ContextLoader                                   (line:   305)  :  Root WebApplicationContext: initialization started
+2020-12-24 00:34:37,403   INFO --- [                             localhost-startStop-1]  org.springframework.web.context.support.XmlWebApplicationContext                (line:   582)  :  Refreshing Root WebApplicationContext: startup date [Thu Dec 24 00:34:37 EST 2020]; root of context hierarchy
+2020-12-24 00:34:37,563   INFO --- [                             localhost-startStop-1]  org.springframework.beans.factory.xml.XmlBeanDefinitionReader                   (line:   317)  :  Loading XML bean definitions from class path resource [application.xml]
+2020-12-24 00:34:38,879   INFO --- [ContainerBackgroundProcessor[StandardEngine[Tomcat]]]  org.springframework.context.support.PropertySourcesPlaceholderConfigurer        (line:   172)  :  Loading properties file from class path resource [recommend.properties]
+2020-12-24 00:34:38,895   INFO --- [ContainerBackgroundProcessor[StandardEngine[Tomcat]]]  org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor(line:   155)  :  JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2020-12-24 00:34:39,397   INFO --- [                             localhost-startStop-1]  org.springframework.context.support.PropertySourcesPlaceholderConfigurer        (line:   172)  :  Loading properties file from class path resource [recommend.properties]
+2020-12-24 00:34:39,405   INFO --- [                             localhost-startStop-1]  org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor(line:   155)  :  JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2020-12-24 00:34:39,648   INFO --- [ContainerBackgroundProcessor[StandardEngine[Tomcat]]]  org.mongodb.driver.cluster                                                      (line:    71)  :  Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2020-12-24 00:34:39,848   INFO --- [cluster-ClusterId{value='5fe4286f2cb18ec4d04679e0', description='null'}-localhost:27017]  org.mongodb.driver.connection                                                   (line:    71)  :  Opened connection [connectionId{localValue:1, serverValue:147}] to localhost:27017
+2020-12-24 00:34:39,891   INFO --- [cluster-ClusterId{value='5fe4286f2cb18ec4d04679e0', description='null'}-localhost:27017]  org.mongodb.driver.cluster                                                      (line:    71)  :  Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[4, 2, 8]}, minWireVersion=0, maxWireVersion=8, maxDocumentSize=16777216, roundTripTimeNanos=1961353}
+2020-12-24 00:34:40,925   INFO --- [                             localhost-startStop-1]  org.mongodb.driver.cluster                                                      (line:    71)  :  Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2020-12-24 00:34:41,123   INFO --- [cluster-ClusterId{value='5fe428702cb18ec77b22665f', description='null'}-localhost:27017]  org.mongodb.driver.connection                                                   (line:    71)  :  Opened connection [connectionId{localValue:1, serverValue:148}] to localhost:27017
+2020-12-24 00:34:41,147   INFO --- [cluster-ClusterId{value='5fe428702cb18ec77b22665f', description='null'}-localhost:27017]  org.mongodb.driver.cluster                                                      (line:    71)  :  Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[4, 2, 8]}, minWireVersion=0, maxWireVersion=8, maxDocumentSize=16777216, roundTripTimeNanos=1448729}
+2020-12-24 00:34:46,775   INFO --- [ContainerBackgroundProcessor[StandardEngine[Tomcat]]]  org.springframework.web.context.ContextLoader                                   (line:   345)  :  Root WebApplicationContext: initialization completed in 10228 ms
+2020-12-24 00:34:46,860   INFO --- [ContainerBackgroundProcessor[StandardEngine[Tomcat]]]  org.springframework.web.servlet.DispatcherServlet                               (line:   489)  :  FrameworkServlet 'recommend': initialization started
+2020-12-24 00:34:46,870   INFO --- [ContainerBackgroundProcessor[StandardEngine[Tomcat]]]  org.springframework.web.context.support.XmlWebApplicationContext                (line:   582)  :  Refreshing WebApplicationContext for namespace 'recommend-servlet': startup date [Thu Dec 24 00:34:46 EST 2020]; parent: Root WebApplicationContext
+2020-12-24 00:34:46,876   INFO --- [ContainerBackgroundProcessor[StandardEngine[Tomcat]]]  org.springframework.beans.factory.xml.XmlBeanDefinitionReader                   (line:   317)  :  Loading XML bean definitions from ServletContext resource [/WEB-INF/application-servlet.xml]
+2020-12-24 00:34:47,250   INFO --- [ContainerBackgroundProcessor[StandardEngine[Tomcat]]]  org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor(line:   155)  :  JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2020-12-24 00:34:47,310   WARN --- [ContainerBackgroundProcessor[StandardEngine[Tomcat]]]  org.springframework.web.context.support.XmlWebApplicationContext                (line:   550)  :  Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'movieRestApi': Unsatisfied dependency expressed through field 'recommenderService'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.atguigu.business.service.RecommenderService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2020-12-24 00:34:47,312  ERROR --- [ContainerBackgroundProcessor[StandardEngine[Tomcat]]]  org.springframework.web.servlet.DispatcherServlet                               (line:   502)  :  Context initialization failed
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'movieRestApi': Unsatisfied dependency expressed through field 'recommenderService'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.atguigu.business.service.RecommenderService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:588)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:88)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:366)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1264)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:553)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:761)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:866)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:542)
+	at org.springframework.web.servlet.FrameworkServlet.configureAndRefreshWebApplicationContext(FrameworkServlet.java:668)
+	at org.springframework.web.servlet.FrameworkServlet.createWebApplicationContext(FrameworkServlet.java:634)
+	at org.springframework.web.servlet.FrameworkServlet.createWebApplicationContext(FrameworkServlet.java:682)
+	at org.springframework.web.servlet.FrameworkServlet.initWebApplicationContext(FrameworkServlet.java:553)
+	at org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:494)
+	at org.springframework.web.servlet.HttpServletBean.init(HttpServletBean.java:136)
+	at javax.servlet.GenericServlet.init(GenericServlet.java:160)
+	at org.apache.catalina.core.StandardWrapper.initServlet(StandardWrapper.java:1280)
+	at org.apache.catalina.core.StandardWrapper.loadServlet(StandardWrapper.java:1193)
+	at org.apache.catalina.core.StandardWrapper.load(StandardWrapper.java:1088)
+	at org.apache.catalina.core.StandardContext.loadOnStartup(StandardContext.java:5176)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5460)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	at org.apache.catalina.core.StandardContext.reload(StandardContext.java:3954)
+	at org.apache.catalina.loader.WebappLoader.backgroundProcess(WebappLoader.java:426)
+	at org.apache.catalina.core.ContainerBase.backgroundProcess(ContainerBase.java:1345)
+	at org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.processChildren(ContainerBase.java:1530)
+	at org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.processChildren(ContainerBase.java:1540)
+	at org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.processChildren(ContainerBase.java:1540)
+	at org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.run(ContainerBase.java:1519)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.atguigu.business.service.RecommenderService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.raiseNoMatchingBeanFound(DefaultListableBeanFactory.java:1486)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1104)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1066)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:585)
+	... 33 more
+2020-12-24 00:34:48,693   INFO --- [                             localhost-startStop-1]  org.springframework.web.context.ContextLoader                                   (line:   345)  :  Root WebApplicationContext: initialization completed in 11499 ms
+2020-12-24 00:34:48,819   INFO --- [                             localhost-startStop-1]  org.springframework.web.servlet.DispatcherServlet                               (line:   489)  :  FrameworkServlet 'recommend': initialization started
+2020-12-24 00:34:48,828   INFO --- [                             localhost-startStop-1]  org.springframework.web.context.support.XmlWebApplicationContext                (line:   582)  :  Refreshing WebApplicationContext for namespace 'recommend-servlet': startup date [Thu Dec 24 00:34:48 EST 2020]; parent: Root WebApplicationContext
+2020-12-24 00:34:48,830   INFO --- [                             localhost-startStop-1]  org.springframework.beans.factory.xml.XmlBeanDefinitionReader                   (line:   317)  :  Loading XML bean definitions from ServletContext resource [/WEB-INF/application-servlet.xml]
+2020-12-24 00:34:49,235   INFO --- [                             localhost-startStop-1]  org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor(line:   155)  :  JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2020-12-24 00:34:49,277   WARN --- [                             localhost-startStop-1]  org.springframework.web.context.support.XmlWebApplicationContext                (line:   550)  :  Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'movieRestApi': Unsatisfied dependency expressed through field 'recommenderService'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.atguigu.business.service.RecommenderService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2020-12-24 00:34:49,278  ERROR --- [                             localhost-startStop-1]  org.springframework.web.servlet.DispatcherServlet                               (line:   502)  :  Context initialization failed
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'movieRestApi': Unsatisfied dependency expressed through field 'recommenderService'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.atguigu.business.service.RecommenderService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:588)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:88)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:366)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1264)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:553)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:761)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:866)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:542)
+	at org.springframework.web.servlet.FrameworkServlet.configureAndRefreshWebApplicationContext(FrameworkServlet.java:668)
+	at org.springframework.web.servlet.FrameworkServlet.createWebApplicationContext(FrameworkServlet.java:634)
+	at org.springframework.web.servlet.FrameworkServlet.createWebApplicationContext(FrameworkServlet.java:682)
+	at org.springframework.web.servlet.FrameworkServlet.initWebApplicationContext(FrameworkServlet.java:553)
+	at org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:494)
+	at org.springframework.web.servlet.HttpServletBean.init(HttpServletBean.java:136)
+	at javax.servlet.GenericServlet.init(GenericServlet.java:160)
+	at org.apache.catalina.core.StandardWrapper.initServlet(StandardWrapper.java:1280)
+	at org.apache.catalina.core.StandardWrapper.loadServlet(StandardWrapper.java:1193)
+	at org.apache.catalina.core.StandardWrapper.load(StandardWrapper.java:1088)
+	at org.apache.catalina.core.StandardContext.loadOnStartup(StandardContext.java:5176)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5460)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1559)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1549)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.atguigu.business.service.RecommenderService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.raiseNoMatchingBeanFound(DefaultListableBeanFactory.java:1486)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1104)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1066)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:585)
+	... 31 more
+2020-12-24 00:34:57,351   INFO --- [ContainerBackgroundProcessor[StandardEngine[Tomcat]]]  org.springframework.web.context.support.XmlWebApplicationContext                (line:   987)  :  Closing Root WebApplicationContext: startup date [Thu Dec 24 00:34:36 EST 2020]; root of context hierarchy
+2020-12-24 00:35:02,549   INFO --- [ContainerBackgroundProcessor[StandardEngine[Tomcat]]]  org.springframework.web.context.ContextLoader                                   (line:   305)  :  Root WebApplicationContext: initialization started
+2020-12-24 00:35:02,609   INFO --- [ContainerBackgroundProcessor[StandardEngine[Tomcat]]]  org.springframework.web.context.support.XmlWebApplicationContext                (line:   582)  :  Refreshing Root WebApplicationContext: startup date [Thu Dec 24 00:35:02 EST 2020]; root of context hierarchy
+2020-12-24 00:35:02,655   INFO --- [ContainerBackgroundProcessor[StandardEngine[Tomcat]]]  org.springframework.beans.factory.xml.XmlBeanDefinitionReader                   (line:   317)  :  Loading XML bean definitions from class path resource [application.xml]
+2020-12-24 00:35:03,045   INFO --- [ContainerBackgroundProcessor[StandardEngine[Tomcat]]]  org.springframework.context.support.PropertySourcesPlaceholderConfigurer        (line:   172)  :  Loading properties file from class path resource [recommend.properties]
+2020-12-24 00:35:03,050   INFO --- [ContainerBackgroundProcessor[StandardEngine[Tomcat]]]  org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor(line:   155)  :  JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2020-12-24 00:35:03,227   INFO --- [ContainerBackgroundProcessor[StandardEngine[Tomcat]]]  org.mongodb.driver.cluster                                                      (line:    71)  :  Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2020-12-24 00:35:03,359   INFO --- [cluster-ClusterId{value='5fe428872cb18ec4d070fb70', description='null'}-localhost:27017]  org.mongodb.driver.connection                                                   (line:    71)  :  Opened connection [connectionId{localValue:1, serverValue:149}] to localhost:27017
+2020-12-24 00:35:03,366   INFO --- [cluster-ClusterId{value='5fe428872cb18ec4d070fb70', description='null'}-localhost:27017]  org.mongodb.driver.cluster                                                      (line:    71)  :  Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[4, 2, 8]}, minWireVersion=0, maxWireVersion=8, maxDocumentSize=16777216, roundTripTimeNanos=938823}
+2020-12-24 00:35:06,805   INFO --- [ContainerBackgroundProcessor[StandardEngine[Tomcat]]]  org.springframework.web.context.ContextLoader                                   (line:   345)  :  Root WebApplicationContext: initialization completed in 4254 ms
+2020-12-24 00:35:06,854   INFO --- [ContainerBackgroundProcessor[StandardEngine[Tomcat]]]  org.springframework.web.servlet.DispatcherServlet                               (line:   489)  :  FrameworkServlet 'recommend': initialization started
+2020-12-24 00:35:06,859   INFO --- [ContainerBackgroundProcessor[StandardEngine[Tomcat]]]  org.springframework.web.context.support.XmlWebApplicationContext                (line:   582)  :  Refreshing WebApplicationContext for namespace 'recommend-servlet': startup date [Thu Dec 24 00:35:06 EST 2020]; parent: Root WebApplicationContext
+2020-12-24 00:35:06,861   INFO --- [ContainerBackgroundProcessor[StandardEngine[Tomcat]]]  org.springframework.beans.factory.xml.XmlBeanDefinitionReader                   (line:   317)  :  Loading XML bean definitions from ServletContext resource [/WEB-INF/application-servlet.xml]
+2020-12-24 00:35:07,049   INFO --- [ContainerBackgroundProcessor[StandardEngine[Tomcat]]]  org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor(line:   155)  :  JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2020-12-24 00:35:07,101   WARN --- [ContainerBackgroundProcessor[StandardEngine[Tomcat]]]  org.springframework.web.context.support.XmlWebApplicationContext                (line:   550)  :  Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'movieRestApi': Unsatisfied dependency expressed through field 'recommenderService'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.atguigu.business.service.RecommenderService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2020-12-24 00:35:07,103  ERROR --- [ContainerBackgroundProcessor[StandardEngine[Tomcat]]]  org.springframework.web.servlet.DispatcherServlet                               (line:   502)  :  Context initialization failed
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'movieRestApi': Unsatisfied dependency expressed through field 'recommenderService'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.atguigu.business.service.RecommenderService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:588)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:88)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:366)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1264)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:553)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:761)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:866)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:542)
+	at org.springframework.web.servlet.FrameworkServlet.configureAndRefreshWebApplicationContext(FrameworkServlet.java:668)
+	at org.springframework.web.servlet.FrameworkServlet.createWebApplicationContext(FrameworkServlet.java:634)
+	at org.springframework.web.servlet.FrameworkServlet.createWebApplicationContext(FrameworkServlet.java:682)
+	at org.springframework.web.servlet.FrameworkServlet.initWebApplicationContext(FrameworkServlet.java:553)
+	at org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:494)
+	at org.springframework.web.servlet.HttpServletBean.init(HttpServletBean.java:136)
+	at javax.servlet.GenericServlet.init(GenericServlet.java:160)
+	at org.apache.catalina.core.StandardWrapper.initServlet(StandardWrapper.java:1280)
+	at org.apache.catalina.core.StandardWrapper.loadServlet(StandardWrapper.java:1193)
+	at org.apache.catalina.core.StandardWrapper.load(StandardWrapper.java:1088)
+	at org.apache.catalina.core.StandardContext.loadOnStartup(StandardContext.java:5176)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5460)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	at org.apache.catalina.core.StandardContext.reload(StandardContext.java:3954)
+	at org.apache.catalina.loader.WebappLoader.backgroundProcess(WebappLoader.java:426)
+	at org.apache.catalina.core.ContainerBase.backgroundProcess(ContainerBase.java:1345)
+	at org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.processChildren(ContainerBase.java:1530)
+	at org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.processChildren(ContainerBase.java:1540)
+	at org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.processChildren(ContainerBase.java:1540)
+	at org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.run(ContainerBase.java:1519)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.atguigu.business.service.RecommenderService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.raiseNoMatchingBeanFound(DefaultListableBeanFactory.java:1486)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1104)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1066)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:585)
+	... 33 more
+2020-12-24 00:36:46,693   INFO --- [                              http-bio-8088-exec-6]  org.springframework.web.servlet.DispatcherServlet                               (line:   489)  :  FrameworkServlet 'recommend': initialization started
+2020-12-24 00:36:46,697   INFO --- [                              http-bio-8088-exec-6]  org.springframework.web.context.support.XmlWebApplicationContext                (line:   582)  :  Refreshing WebApplicationContext for namespace 'recommend-servlet': startup date [Thu Dec 24 00:36:46 EST 2020]; parent: Root WebApplicationContext
+2020-12-24 00:36:46,699   INFO --- [                              http-bio-8088-exec-6]  org.springframework.beans.factory.xml.XmlBeanDefinitionReader                   (line:   317)  :  Loading XML bean definitions from ServletContext resource [/WEB-INF/application-servlet.xml]
+2020-12-24 00:36:46,772   INFO --- [                              http-bio-8088-exec-6]  org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor(line:   155)  :  JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2020-12-24 00:36:46,797   WARN --- [                              http-bio-8088-exec-6]  org.springframework.web.context.support.XmlWebApplicationContext                (line:   550)  :  Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'movieRestApi': Unsatisfied dependency expressed through field 'recommenderService'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.atguigu.business.service.RecommenderService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2020-12-24 00:36:46,799  ERROR --- [                              http-bio-8088-exec-6]  org.springframework.web.servlet.DispatcherServlet                               (line:   502)  :  Context initialization failed
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'movieRestApi': Unsatisfied dependency expressed through field 'recommenderService'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.atguigu.business.service.RecommenderService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:588)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:88)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:366)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1264)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:553)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:761)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:866)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:542)
+	at org.springframework.web.servlet.FrameworkServlet.configureAndRefreshWebApplicationContext(FrameworkServlet.java:668)
+	at org.springframework.web.servlet.FrameworkServlet.createWebApplicationContext(FrameworkServlet.java:634)
+	at org.springframework.web.servlet.FrameworkServlet.createWebApplicationContext(FrameworkServlet.java:682)
+	at org.springframework.web.servlet.FrameworkServlet.initWebApplicationContext(FrameworkServlet.java:553)
+	at org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:494)
+	at org.springframework.web.servlet.HttpServletBean.init(HttpServletBean.java:136)
+	at javax.servlet.GenericServlet.init(GenericServlet.java:160)
+	at org.apache.catalina.core.StandardWrapper.initServlet(StandardWrapper.java:1280)
+	at org.apache.catalina.core.StandardWrapper.loadServlet(StandardWrapper.java:1193)
+	at org.apache.catalina.core.StandardWrapper.allocate(StandardWrapper.java:865)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:136)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:123)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:502)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:171)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:100)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:953)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:118)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:408)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1041)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:603)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:310)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.atguigu.business.service.RecommenderService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.raiseNoMatchingBeanFound(DefaultListableBeanFactory.java:1486)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1104)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1066)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:585)
+	... 36 more
+2020-12-24 00:36:48,555   INFO --- [                              http-bio-8088-exec-9]  org.springframework.web.servlet.DispatcherServlet                               (line:   489)  :  FrameworkServlet 'recommend': initialization started
+2020-12-24 00:36:48,557   INFO --- [                              http-bio-8088-exec-9]  org.springframework.web.context.support.XmlWebApplicationContext                (line:   582)  :  Refreshing WebApplicationContext for namespace 'recommend-servlet': startup date [Thu Dec 24 00:36:48 EST 2020]; parent: Root WebApplicationContext
+2020-12-24 00:36:48,558   INFO --- [                              http-bio-8088-exec-9]  org.springframework.beans.factory.xml.XmlBeanDefinitionReader                   (line:   317)  :  Loading XML bean definitions from ServletContext resource [/WEB-INF/application-servlet.xml]
+2020-12-24 00:36:48,623   INFO --- [                              http-bio-8088-exec-9]  org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor(line:   155)  :  JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2020-12-24 00:36:48,653   WARN --- [                              http-bio-8088-exec-9]  org.springframework.web.context.support.XmlWebApplicationContext                (line:   550)  :  Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'movieRestApi': Unsatisfied dependency expressed through field 'recommenderService'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.atguigu.business.service.RecommenderService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2020-12-24 00:36:48,654  ERROR --- [                              http-bio-8088-exec-9]  org.springframework.web.servlet.DispatcherServlet                               (line:   502)  :  Context initialization failed
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'movieRestApi': Unsatisfied dependency expressed through field 'recommenderService'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.atguigu.business.service.RecommenderService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:588)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:88)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:366)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1264)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:553)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:761)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:866)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:542)
+	at org.springframework.web.servlet.FrameworkServlet.configureAndRefreshWebApplicationContext(FrameworkServlet.java:668)
+	at org.springframework.web.servlet.FrameworkServlet.createWebApplicationContext(FrameworkServlet.java:634)
+	at org.springframework.web.servlet.FrameworkServlet.createWebApplicationContext(FrameworkServlet.java:682)
+	at org.springframework.web.servlet.FrameworkServlet.initWebApplicationContext(FrameworkServlet.java:553)
+	at org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:494)
+	at org.springframework.web.servlet.HttpServletBean.init(HttpServletBean.java:136)
+	at javax.servlet.GenericServlet.init(GenericServlet.java:160)
+	at org.apache.catalina.core.StandardWrapper.initServlet(StandardWrapper.java:1280)
+	at org.apache.catalina.core.StandardWrapper.loadServlet(StandardWrapper.java:1193)
+	at org.apache.catalina.core.StandardWrapper.allocate(StandardWrapper.java:865)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:136)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:123)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:502)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:171)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:100)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:953)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:118)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:408)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1041)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:603)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:310)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.atguigu.business.service.RecommenderService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.raiseNoMatchingBeanFound(DefaultListableBeanFactory.java:1486)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1104)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1066)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:585)
+	... 36 more
+2020-12-24 00:36:56,312   INFO --- [                              http-bio-8088-exec-8]  org.springframework.web.servlet.DispatcherServlet                               (line:   489)  :  FrameworkServlet 'recommend': initialization started
+2020-12-24 00:36:56,317   INFO --- [                              http-bio-8088-exec-8]  org.springframework.web.context.support.XmlWebApplicationContext                (line:   582)  :  Refreshing WebApplicationContext for namespace 'recommend-servlet': startup date [Thu Dec 24 00:36:56 EST 2020]; parent: Root WebApplicationContext
+2020-12-24 00:36:56,318   INFO --- [                              http-bio-8088-exec-8]  org.springframework.beans.factory.xml.XmlBeanDefinitionReader                   (line:   317)  :  Loading XML bean definitions from ServletContext resource [/WEB-INF/application-servlet.xml]
+2020-12-24 00:36:56,381   INFO --- [                              http-bio-8088-exec-8]  org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor(line:   155)  :  JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2020-12-24 00:36:56,405   WARN --- [                              http-bio-8088-exec-8]  org.springframework.web.context.support.XmlWebApplicationContext                (line:   550)  :  Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'movieRestApi': Unsatisfied dependency expressed through field 'recommenderService'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.atguigu.business.service.RecommenderService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2020-12-24 00:36:56,406  ERROR --- [                              http-bio-8088-exec-8]  org.springframework.web.servlet.DispatcherServlet                               (line:   502)  :  Context initialization failed
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'movieRestApi': Unsatisfied dependency expressed through field 'recommenderService'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.atguigu.business.service.RecommenderService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:588)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:88)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:366)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1264)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:553)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:761)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:866)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:542)
+	at org.springframework.web.servlet.FrameworkServlet.configureAndRefreshWebApplicationContext(FrameworkServlet.java:668)
+	at org.springframework.web.servlet.FrameworkServlet.createWebApplicationContext(FrameworkServlet.java:634)
+	at org.springframework.web.servlet.FrameworkServlet.createWebApplicationContext(FrameworkServlet.java:682)
+	at org.springframework.web.servlet.FrameworkServlet.initWebApplicationContext(FrameworkServlet.java:553)
+	at org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:494)
+	at org.springframework.web.servlet.HttpServletBean.init(HttpServletBean.java:136)
+	at javax.servlet.GenericServlet.init(GenericServlet.java:160)
+	at org.apache.catalina.core.StandardWrapper.initServlet(StandardWrapper.java:1280)
+	at org.apache.catalina.core.StandardWrapper.loadServlet(StandardWrapper.java:1193)
+	at org.apache.catalina.core.StandardWrapper.allocate(StandardWrapper.java:865)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:136)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:123)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:502)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:171)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:100)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:953)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:118)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:408)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1041)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:603)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:310)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.atguigu.business.service.RecommenderService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.raiseNoMatchingBeanFound(DefaultListableBeanFactory.java:1486)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1104)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1066)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:585)
+	... 36 more
+2020-12-24 00:36:59,532   INFO --- [                              http-bio-8088-exec-5]  org.springframework.web.servlet.DispatcherServlet                               (line:   489)  :  FrameworkServlet 'recommend': initialization started
+2020-12-24 00:36:59,536   INFO --- [                              http-bio-8088-exec-5]  org.springframework.web.context.support.XmlWebApplicationContext                (line:   582)  :  Refreshing WebApplicationContext for namespace 'recommend-servlet': startup date [Thu Dec 24 00:36:59 EST 2020]; parent: Root WebApplicationContext
+2020-12-24 00:36:59,538   INFO --- [                              http-bio-8088-exec-5]  org.springframework.beans.factory.xml.XmlBeanDefinitionReader                   (line:   317)  :  Loading XML bean definitions from ServletContext resource [/WEB-INF/application-servlet.xml]
+2020-12-24 00:36:59,585   INFO --- [                              http-bio-8088-exec-5]  org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor(line:   155)  :  JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2020-12-24 00:36:59,610   WARN --- [                              http-bio-8088-exec-5]  org.springframework.web.context.support.XmlWebApplicationContext                (line:   550)  :  Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'movieRestApi': Unsatisfied dependency expressed through field 'recommenderService'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.atguigu.business.service.RecommenderService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2020-12-24 00:36:59,610  ERROR --- [                              http-bio-8088-exec-5]  org.springframework.web.servlet.DispatcherServlet                               (line:   502)  :  Context initialization failed
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'movieRestApi': Unsatisfied dependency expressed through field 'recommenderService'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.atguigu.business.service.RecommenderService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:588)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:88)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:366)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1264)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:553)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:761)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:866)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:542)
+	at org.springframework.web.servlet.FrameworkServlet.configureAndRefreshWebApplicationContext(FrameworkServlet.java:668)
+	at org.springframework.web.servlet.FrameworkServlet.createWebApplicationContext(FrameworkServlet.java:634)
+	at org.springframework.web.servlet.FrameworkServlet.createWebApplicationContext(FrameworkServlet.java:682)
+	at org.springframework.web.servlet.FrameworkServlet.initWebApplicationContext(FrameworkServlet.java:553)
+	at org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:494)
+	at org.springframework.web.servlet.HttpServletBean.init(HttpServletBean.java:136)
+	at javax.servlet.GenericServlet.init(GenericServlet.java:160)
+	at org.apache.catalina.core.StandardWrapper.initServlet(StandardWrapper.java:1280)
+	at org.apache.catalina.core.StandardWrapper.loadServlet(StandardWrapper.java:1193)
+	at org.apache.catalina.core.StandardWrapper.allocate(StandardWrapper.java:865)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:136)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:123)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:502)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:171)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:100)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:953)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:118)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:408)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1041)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:603)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:310)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.atguigu.business.service.RecommenderService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.raiseNoMatchingBeanFound(DefaultListableBeanFactory.java:1486)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1104)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1066)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:585)
+	... 36 more
+2020-12-24 00:37:07,707   INFO --- [                             http-bio-8088-exec-10]  org.springframework.web.servlet.DispatcherServlet                               (line:   489)  :  FrameworkServlet 'recommend': initialization started
+2020-12-24 00:37:07,709   INFO --- [                             http-bio-8088-exec-10]  org.springframework.web.context.support.XmlWebApplicationContext                (line:   582)  :  Refreshing WebApplicationContext for namespace 'recommend-servlet': startup date [Thu Dec 24 00:37:07 EST 2020]; parent: Root WebApplicationContext
+2020-12-24 00:37:07,710   INFO --- [                             http-bio-8088-exec-10]  org.springframework.beans.factory.xml.XmlBeanDefinitionReader                   (line:   317)  :  Loading XML bean definitions from ServletContext resource [/WEB-INF/application-servlet.xml]
+2020-12-24 00:37:07,778   INFO --- [                             http-bio-8088-exec-10]  org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor(line:   155)  :  JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2020-12-24 00:37:07,803   WARN --- [                             http-bio-8088-exec-10]  org.springframework.web.context.support.XmlWebApplicationContext                (line:   550)  :  Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'movieRestApi': Unsatisfied dependency expressed through field 'recommenderService'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.atguigu.business.service.RecommenderService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2020-12-24 00:37:07,804  ERROR --- [                             http-bio-8088-exec-10]  org.springframework.web.servlet.DispatcherServlet                               (line:   502)  :  Context initialization failed
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'movieRestApi': Unsatisfied dependency expressed through field 'recommenderService'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.atguigu.business.service.RecommenderService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:588)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:88)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:366)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1264)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:553)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:761)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:866)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:542)
+	at org.springframework.web.servlet.FrameworkServlet.configureAndRefreshWebApplicationContext(FrameworkServlet.java:668)
+	at org.springframework.web.servlet.FrameworkServlet.createWebApplicationContext(FrameworkServlet.java:634)
+	at org.springframework.web.servlet.FrameworkServlet.createWebApplicationContext(FrameworkServlet.java:682)
+	at org.springframework.web.servlet.FrameworkServlet.initWebApplicationContext(FrameworkServlet.java:553)
+	at org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:494)
+	at org.springframework.web.servlet.HttpServletBean.init(HttpServletBean.java:136)
+	at javax.servlet.GenericServlet.init(GenericServlet.java:160)
+	at org.apache.catalina.core.StandardWrapper.initServlet(StandardWrapper.java:1280)
+	at org.apache.catalina.core.StandardWrapper.loadServlet(StandardWrapper.java:1193)
+	at org.apache.catalina.core.StandardWrapper.allocate(StandardWrapper.java:865)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:136)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:123)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:502)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:171)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:100)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:953)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:118)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:408)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1041)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:603)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:310)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.atguigu.business.service.RecommenderService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.raiseNoMatchingBeanFound(DefaultListableBeanFactory.java:1486)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1104)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1066)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:585)
+	... 36 more
+2020-12-24 00:37:09,043   INFO --- [                              http-bio-8088-exec-7]  org.springframework.web.servlet.DispatcherServlet                               (line:   489)  :  FrameworkServlet 'recommend': initialization started
+2020-12-24 00:37:09,045   INFO --- [                              http-bio-8088-exec-7]  org.springframework.web.context.support.XmlWebApplicationContext                (line:   582)  :  Refreshing WebApplicationContext for namespace 'recommend-servlet': startup date [Thu Dec 24 00:37:09 EST 2020]; parent: Root WebApplicationContext
+2020-12-24 00:37:09,045   INFO --- [                              http-bio-8088-exec-7]  org.springframework.beans.factory.xml.XmlBeanDefinitionReader                   (line:   317)  :  Loading XML bean definitions from ServletContext resource [/WEB-INF/application-servlet.xml]
+2020-12-24 00:37:09,097   INFO --- [                              http-bio-8088-exec-7]  org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor(line:   155)  :  JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2020-12-24 00:37:09,126   WARN --- [                              http-bio-8088-exec-7]  org.springframework.web.context.support.XmlWebApplicationContext                (line:   550)  :  Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'movieRestApi': Unsatisfied dependency expressed through field 'recommenderService'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.atguigu.business.service.RecommenderService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2020-12-24 00:37:09,127  ERROR --- [                              http-bio-8088-exec-7]  org.springframework.web.servlet.DispatcherServlet                               (line:   502)  :  Context initialization failed
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'movieRestApi': Unsatisfied dependency expressed through field 'recommenderService'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.atguigu.business.service.RecommenderService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:588)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:88)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:366)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1264)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:553)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:761)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:866)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:542)
+	at org.springframework.web.servlet.FrameworkServlet.configureAndRefreshWebApplicationContext(FrameworkServlet.java:668)
+	at org.springframework.web.servlet.FrameworkServlet.createWebApplicationContext(FrameworkServlet.java:634)
+	at org.springframework.web.servlet.FrameworkServlet.createWebApplicationContext(FrameworkServlet.java:682)
+	at org.springframework.web.servlet.FrameworkServlet.initWebApplicationContext(FrameworkServlet.java:553)
+	at org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:494)
+	at org.springframework.web.servlet.HttpServletBean.init(HttpServletBean.java:136)
+	at javax.servlet.GenericServlet.init(GenericServlet.java:160)
+	at org.apache.catalina.core.StandardWrapper.initServlet(StandardWrapper.java:1280)
+	at org.apache.catalina.core.StandardWrapper.loadServlet(StandardWrapper.java:1193)
+	at org.apache.catalina.core.StandardWrapper.allocate(StandardWrapper.java:865)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:136)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:123)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:502)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:171)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:100)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:953)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:118)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:408)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1041)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:603)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:310)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.atguigu.business.service.RecommenderService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.raiseNoMatchingBeanFound(DefaultListableBeanFactory.java:1486)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1104)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1066)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:585)
+	... 36 more
+2020-12-24 00:37:10,628   INFO --- [                              http-bio-8088-exec-3]  org.springframework.web.servlet.DispatcherServlet                               (line:   489)  :  FrameworkServlet 'recommend': initialization started
+2020-12-24 00:37:10,631   INFO --- [                              http-bio-8088-exec-3]  org.springframework.web.context.support.XmlWebApplicationContext                (line:   582)  :  Refreshing WebApplicationContext for namespace 'recommend-servlet': startup date [Thu Dec 24 00:37:10 EST 2020]; parent: Root WebApplicationContext
+2020-12-24 00:37:10,632   INFO --- [                              http-bio-8088-exec-3]  org.springframework.beans.factory.xml.XmlBeanDefinitionReader                   (line:   317)  :  Loading XML bean definitions from ServletContext resource [/WEB-INF/application-servlet.xml]
+2020-12-24 00:37:10,698   INFO --- [                              http-bio-8088-exec-3]  org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor(line:   155)  :  JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2020-12-24 00:37:10,735   WARN --- [                              http-bio-8088-exec-3]  org.springframework.web.context.support.XmlWebApplicationContext                (line:   550)  :  Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'movieRestApi': Unsatisfied dependency expressed through field 'recommenderService'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.atguigu.business.service.RecommenderService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2020-12-24 00:37:10,735  ERROR --- [                              http-bio-8088-exec-3]  org.springframework.web.servlet.DispatcherServlet                               (line:   502)  :  Context initialization failed
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'movieRestApi': Unsatisfied dependency expressed through field 'recommenderService'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.atguigu.business.service.RecommenderService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:588)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:88)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:366)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1264)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:553)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:761)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:866)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:542)
+	at org.springframework.web.servlet.FrameworkServlet.configureAndRefreshWebApplicationContext(FrameworkServlet.java:668)
+	at org.springframework.web.servlet.FrameworkServlet.createWebApplicationContext(FrameworkServlet.java:634)
+	at org.springframework.web.servlet.FrameworkServlet.createWebApplicationContext(FrameworkServlet.java:682)
+	at org.springframework.web.servlet.FrameworkServlet.initWebApplicationContext(FrameworkServlet.java:553)
+	at org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:494)
+	at org.springframework.web.servlet.HttpServletBean.init(HttpServletBean.java:136)
+	at javax.servlet.GenericServlet.init(GenericServlet.java:160)
+	at org.apache.catalina.core.StandardWrapper.initServlet(StandardWrapper.java:1280)
+	at org.apache.catalina.core.StandardWrapper.loadServlet(StandardWrapper.java:1193)
+	at org.apache.catalina.core.StandardWrapper.allocate(StandardWrapper.java:865)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:136)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:123)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:502)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:171)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:100)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:953)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:118)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:408)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1041)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:603)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:310)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.atguigu.business.service.RecommenderService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.raiseNoMatchingBeanFound(DefaultListableBeanFactory.java:1486)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1104)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1066)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:585)
+	... 36 more
+2020-12-24 00:37:11,905   INFO --- [                              http-bio-8088-exec-2]  org.springframework.web.servlet.DispatcherServlet                               (line:   489)  :  FrameworkServlet 'recommend': initialization started
+2020-12-24 00:37:11,907   INFO --- [                              http-bio-8088-exec-2]  org.springframework.web.context.support.XmlWebApplicationContext                (line:   582)  :  Refreshing WebApplicationContext for namespace 'recommend-servlet': startup date [Thu Dec 24 00:37:11 EST 2020]; parent: Root WebApplicationContext
+2020-12-24 00:37:11,908   INFO --- [                              http-bio-8088-exec-2]  org.springframework.beans.factory.xml.XmlBeanDefinitionReader                   (line:   317)  :  Loading XML bean definitions from ServletContext resource [/WEB-INF/application-servlet.xml]
+2020-12-24 00:37:11,956   INFO --- [                              http-bio-8088-exec-2]  org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor(line:   155)  :  JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2020-12-24 00:37:11,976   WARN --- [                              http-bio-8088-exec-2]  org.springframework.web.context.support.XmlWebApplicationContext                (line:   550)  :  Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'movieRestApi': Unsatisfied dependency expressed through field 'recommenderService'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.atguigu.business.service.RecommenderService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2020-12-24 00:37:11,978  ERROR --- [                              http-bio-8088-exec-2]  org.springframework.web.servlet.DispatcherServlet                               (line:   502)  :  Context initialization failed
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'movieRestApi': Unsatisfied dependency expressed through field 'recommenderService'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.atguigu.business.service.RecommenderService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:588)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:88)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:366)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1264)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:553)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:761)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:866)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:542)
+	at org.springframework.web.servlet.FrameworkServlet.configureAndRefreshWebApplicationContext(FrameworkServlet.java:668)
+	at org.springframework.web.servlet.FrameworkServlet.createWebApplicationContext(FrameworkServlet.java:634)
+	at org.springframework.web.servlet.FrameworkServlet.createWebApplicationContext(FrameworkServlet.java:682)
+	at org.springframework.web.servlet.FrameworkServlet.initWebApplicationContext(FrameworkServlet.java:553)
+	at org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:494)
+	at org.springframework.web.servlet.HttpServletBean.init(HttpServletBean.java:136)
+	at javax.servlet.GenericServlet.init(GenericServlet.java:160)
+	at org.apache.catalina.core.StandardWrapper.initServlet(StandardWrapper.java:1280)
+	at org.apache.catalina.core.StandardWrapper.loadServlet(StandardWrapper.java:1193)
+	at org.apache.catalina.core.StandardWrapper.allocate(StandardWrapper.java:865)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:136)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:123)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:502)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:171)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:100)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:953)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:118)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:408)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1041)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:603)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:310)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.atguigu.business.service.RecommenderService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.raiseNoMatchingBeanFound(DefaultListableBeanFactory.java:1486)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1104)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1066)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:585)
+	... 36 more
+2020-12-24 00:37:12,207   INFO --- [                              http-bio-8088-exec-4]  org.springframework.web.servlet.DispatcherServlet                               (line:   489)  :  FrameworkServlet 'recommend': initialization started
+2020-12-24 00:37:12,213   INFO --- [                              http-bio-8088-exec-4]  org.springframework.web.context.support.XmlWebApplicationContext                (line:   582)  :  Refreshing WebApplicationContext for namespace 'recommend-servlet': startup date [Thu Dec 24 00:37:12 EST 2020]; parent: Root WebApplicationContext
+2020-12-24 00:37:12,218   INFO --- [                              http-bio-8088-exec-4]  org.springframework.beans.factory.xml.XmlBeanDefinitionReader                   (line:   317)  :  Loading XML bean definitions from ServletContext resource [/WEB-INF/application-servlet.xml]
+2020-12-24 00:37:12,293   INFO --- [                              http-bio-8088-exec-4]  org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor(line:   155)  :  JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2020-12-24 00:37:12,316   WARN --- [                              http-bio-8088-exec-4]  org.springframework.web.context.support.XmlWebApplicationContext                (line:   550)  :  Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'movieRestApi': Unsatisfied dependency expressed through field 'recommenderService'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.atguigu.business.service.RecommenderService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2020-12-24 00:37:12,317  ERROR --- [                              http-bio-8088-exec-4]  org.springframework.web.servlet.DispatcherServlet                               (line:   502)  :  Context initialization failed
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'movieRestApi': Unsatisfied dependency expressed through field 'recommenderService'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.atguigu.business.service.RecommenderService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:588)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:88)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:366)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1264)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:553)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:761)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:866)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:542)
+	at org.springframework.web.servlet.FrameworkServlet.configureAndRefreshWebApplicationContext(FrameworkServlet.java:668)
+	at org.springframework.web.servlet.FrameworkServlet.createWebApplicationContext(FrameworkServlet.java:634)
+	at org.springframework.web.servlet.FrameworkServlet.createWebApplicationContext(FrameworkServlet.java:682)
+	at org.springframework.web.servlet.FrameworkServlet.initWebApplicationContext(FrameworkServlet.java:553)
+	at org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:494)
+	at org.springframework.web.servlet.HttpServletBean.init(HttpServletBean.java:136)
+	at javax.servlet.GenericServlet.init(GenericServlet.java:160)
+	at org.apache.catalina.core.StandardWrapper.initServlet(StandardWrapper.java:1280)
+	at org.apache.catalina.core.StandardWrapper.loadServlet(StandardWrapper.java:1193)
+	at org.apache.catalina.core.StandardWrapper.allocate(StandardWrapper.java:865)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:136)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:123)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:502)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:171)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:100)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:953)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:118)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:408)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1041)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:603)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:310)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.atguigu.business.service.RecommenderService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.raiseNoMatchingBeanFound(DefaultListableBeanFactory.java:1486)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1104)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1066)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:585)
+	... 36 more
+2020-12-24 00:37:19,338   INFO --- [                              http-bio-8088-exec-1]  org.springframework.web.servlet.DispatcherServlet                               (line:   489)  :  FrameworkServlet 'recommend': initialization started
+2020-12-24 00:37:19,340   INFO --- [                              http-bio-8088-exec-1]  org.springframework.web.context.support.XmlWebApplicationContext                (line:   582)  :  Refreshing WebApplicationContext for namespace 'recommend-servlet': startup date [Thu Dec 24 00:37:19 EST 2020]; parent: Root WebApplicationContext
+2020-12-24 00:37:19,340   INFO --- [                              http-bio-8088-exec-1]  org.springframework.beans.factory.xml.XmlBeanDefinitionReader                   (line:   317)  :  Loading XML bean definitions from ServletContext resource [/WEB-INF/application-servlet.xml]
+2020-12-24 00:37:19,400   INFO --- [                              http-bio-8088-exec-1]  org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor(line:   155)  :  JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2020-12-24 00:37:19,428   WARN --- [                              http-bio-8088-exec-1]  org.springframework.web.context.support.XmlWebApplicationContext                (line:   550)  :  Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'movieRestApi': Unsatisfied dependency expressed through field 'recommenderService'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.atguigu.business.service.RecommenderService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2020-12-24 00:37:19,429  ERROR --- [                              http-bio-8088-exec-1]  org.springframework.web.servlet.DispatcherServlet                               (line:   502)  :  Context initialization failed
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'movieRestApi': Unsatisfied dependency expressed through field 'recommenderService'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.atguigu.business.service.RecommenderService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:588)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:88)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:366)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1264)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:553)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:761)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:866)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:542)
+	at org.springframework.web.servlet.FrameworkServlet.configureAndRefreshWebApplicationContext(FrameworkServlet.java:668)
+	at org.springframework.web.servlet.FrameworkServlet.createWebApplicationContext(FrameworkServlet.java:634)
+	at org.springframework.web.servlet.FrameworkServlet.createWebApplicationContext(FrameworkServlet.java:682)
+	at org.springframework.web.servlet.FrameworkServlet.initWebApplicationContext(FrameworkServlet.java:553)
+	at org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:494)
+	at org.springframework.web.servlet.HttpServletBean.init(HttpServletBean.java:136)
+	at javax.servlet.GenericServlet.init(GenericServlet.java:160)
+	at org.apache.catalina.core.StandardWrapper.initServlet(StandardWrapper.java:1280)
+	at org.apache.catalina.core.StandardWrapper.loadServlet(StandardWrapper.java:1193)
+	at org.apache.catalina.core.StandardWrapper.allocate(StandardWrapper.java:865)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:136)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:123)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:502)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:171)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:100)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:953)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:118)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:408)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1041)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:603)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:310)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.atguigu.business.service.RecommenderService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.raiseNoMatchingBeanFound(DefaultListableBeanFactory.java:1486)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1104)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1066)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:585)
+	... 36 more
+2020-12-24 00:37:23,499   INFO --- [                              http-bio-8088-exec-6]  org.springframework.web.servlet.DispatcherServlet                               (line:   489)  :  FrameworkServlet 'recommend': initialization started
+2020-12-24 00:37:23,503   INFO --- [                              http-bio-8088-exec-6]  org.springframework.web.context.support.XmlWebApplicationContext                (line:   582)  :  Refreshing WebApplicationContext for namespace 'recommend-servlet': startup date [Thu Dec 24 00:37:23 EST 2020]; parent: Root WebApplicationContext
+2020-12-24 00:37:23,504   INFO --- [                              http-bio-8088-exec-6]  org.springframework.beans.factory.xml.XmlBeanDefinitionReader                   (line:   317)  :  Loading XML bean definitions from ServletContext resource [/WEB-INF/application-servlet.xml]
+2020-12-24 00:37:23,559   INFO --- [                              http-bio-8088-exec-6]  org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor(line:   155)  :  JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2020-12-24 00:37:23,626   WARN --- [                              http-bio-8088-exec-6]  org.springframework.web.context.support.XmlWebApplicationContext                (line:   550)  :  Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'movieRestApi': Unsatisfied dependency expressed through field 'recommenderService'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.atguigu.business.service.RecommenderService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2020-12-24 00:37:23,627  ERROR --- [                              http-bio-8088-exec-6]  org.springframework.web.servlet.DispatcherServlet                               (line:   502)  :  Context initialization failed
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'movieRestApi': Unsatisfied dependency expressed through field 'recommenderService'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.atguigu.business.service.RecommenderService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:588)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:88)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:366)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1264)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:553)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:761)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:866)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:542)
+	at org.springframework.web.servlet.FrameworkServlet.configureAndRefreshWebApplicationContext(FrameworkServlet.java:668)
+	at org.springframework.web.servlet.FrameworkServlet.createWebApplicationContext(FrameworkServlet.java:634)
+	at org.springframework.web.servlet.FrameworkServlet.createWebApplicationContext(FrameworkServlet.java:682)
+	at org.springframework.web.servlet.FrameworkServlet.initWebApplicationContext(FrameworkServlet.java:553)
+	at org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:494)
+	at org.springframework.web.servlet.HttpServletBean.init(HttpServletBean.java:136)
+	at javax.servlet.GenericServlet.init(GenericServlet.java:160)
+	at org.apache.catalina.core.StandardWrapper.initServlet(StandardWrapper.java:1280)
+	at org.apache.catalina.core.StandardWrapper.loadServlet(StandardWrapper.java:1193)
+	at org.apache.catalina.core.StandardWrapper.allocate(StandardWrapper.java:865)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:136)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:123)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:502)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:171)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:100)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:953)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:118)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:408)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1041)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:603)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:310)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.atguigu.business.service.RecommenderService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.raiseNoMatchingBeanFound(DefaultListableBeanFactory.java:1486)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1104)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1066)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:585)
+	... 36 more
+2020-12-24 00:37:29,651   INFO --- [                              http-bio-8088-exec-9]  org.springframework.web.servlet.DispatcherServlet                               (line:   489)  :  FrameworkServlet 'recommend': initialization started
+2020-12-24 00:37:29,654   INFO --- [                              http-bio-8088-exec-9]  org.springframework.web.context.support.XmlWebApplicationContext                (line:   582)  :  Refreshing WebApplicationContext for namespace 'recommend-servlet': startup date [Thu Dec 24 00:37:29 EST 2020]; parent: Root WebApplicationContext
+2020-12-24 00:37:29,654   INFO --- [                              http-bio-8088-exec-9]  org.springframework.beans.factory.xml.XmlBeanDefinitionReader                   (line:   317)  :  Loading XML bean definitions from ServletContext resource [/WEB-INF/application-servlet.xml]
+2020-12-24 00:37:29,705   INFO --- [                              http-bio-8088-exec-9]  org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor(line:   155)  :  JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2020-12-24 00:37:29,728   WARN --- [                              http-bio-8088-exec-9]  org.springframework.web.context.support.XmlWebApplicationContext                (line:   550)  :  Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'movieRestApi': Unsatisfied dependency expressed through field 'recommenderService'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.atguigu.business.service.RecommenderService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2020-12-24 00:37:29,728  ERROR --- [                              http-bio-8088-exec-9]  org.springframework.web.servlet.DispatcherServlet                               (line:   502)  :  Context initialization failed
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'movieRestApi': Unsatisfied dependency expressed through field 'recommenderService'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.atguigu.business.service.RecommenderService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:588)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:88)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:366)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1264)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:553)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:761)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:866)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:542)
+	at org.springframework.web.servlet.FrameworkServlet.configureAndRefreshWebApplicationContext(FrameworkServlet.java:668)
+	at org.springframework.web.servlet.FrameworkServlet.createWebApplicationContext(FrameworkServlet.java:634)
+	at org.springframework.web.servlet.FrameworkServlet.createWebApplicationContext(FrameworkServlet.java:682)
+	at org.springframework.web.servlet.FrameworkServlet.initWebApplicationContext(FrameworkServlet.java:553)
+	at org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:494)
+	at org.springframework.web.servlet.HttpServletBean.init(HttpServletBean.java:136)
+	at javax.servlet.GenericServlet.init(GenericServlet.java:160)
+	at org.apache.catalina.core.StandardWrapper.initServlet(StandardWrapper.java:1280)
+	at org.apache.catalina.core.StandardWrapper.loadServlet(StandardWrapper.java:1193)
+	at org.apache.catalina.core.StandardWrapper.allocate(StandardWrapper.java:865)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:136)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:123)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:502)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:171)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:100)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:953)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:118)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:408)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1041)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:603)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:310)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.atguigu.business.service.RecommenderService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.raiseNoMatchingBeanFound(DefaultListableBeanFactory.java:1486)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1104)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1066)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:585)
+	... 36 more
+2020-12-24 10:34:08,144   INFO --- [                             localhost-startStop-1]  org.springframework.web.context.ContextLoader                                   (line:   305)  :  Root WebApplicationContext: initialization started
+2020-12-24 10:34:08,312   INFO --- [                             localhost-startStop-1]  org.springframework.web.context.support.XmlWebApplicationContext                (line:   582)  :  Refreshing Root WebApplicationContext: startup date [Thu Dec 24 10:34:08 EST 2020]; root of context hierarchy
+2020-12-24 10:34:08,440   INFO --- [                             localhost-startStop-1]  org.springframework.beans.factory.xml.XmlBeanDefinitionReader                   (line:   317)  :  Loading XML bean definitions from class path resource [application.xml]
+2020-12-24 10:34:10,477   INFO --- [                             localhost-startStop-1]  org.springframework.context.support.PropertySourcesPlaceholderConfigurer        (line:   172)  :  Loading properties file from class path resource [recommend.properties]
+2020-12-24 10:34:10,493   INFO --- [                             localhost-startStop-1]  org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor(line:   155)  :  JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2020-12-24 10:34:11,710   INFO --- [                             localhost-startStop-1]  org.mongodb.driver.cluster                                                      (line:    71)  :  Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2020-12-24 10:34:11,910   INFO --- [cluster-ClusterId{value='5fe4b4f32cb18ed37b15e82a', description='null'}-localhost:27017]  org.mongodb.driver.connection                                                   (line:    71)  :  Opened connection [connectionId{localValue:1, serverValue:150}] to localhost:27017
+2020-12-24 10:34:11,957   INFO --- [cluster-ClusterId{value='5fe4b4f32cb18ed37b15e82a', description='null'}-localhost:27017]  org.mongodb.driver.cluster                                                      (line:    71)  :  Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[4, 2, 8]}, minWireVersion=0, maxWireVersion=8, maxDocumentSize=16777216, roundTripTimeNanos=874768}
+2020-12-24 10:34:17,896   INFO --- [                             localhost-startStop-1]  org.springframework.web.context.ContextLoader                                   (line:   345)  :  Root WebApplicationContext: initialization completed in 9747 ms
+2020-12-24 10:34:18,049   INFO --- [                             localhost-startStop-1]  org.springframework.web.servlet.DispatcherServlet                               (line:   489)  :  FrameworkServlet 'recommend': initialization started
+2020-12-24 10:34:18,053   INFO --- [                             localhost-startStop-1]  org.springframework.web.context.support.XmlWebApplicationContext                (line:   582)  :  Refreshing WebApplicationContext for namespace 'recommend-servlet': startup date [Thu Dec 24 10:34:18 EST 2020]; parent: Root WebApplicationContext
+2020-12-24 10:34:18,055   INFO --- [                             localhost-startStop-1]  org.springframework.beans.factory.xml.XmlBeanDefinitionReader                   (line:   317)  :  Loading XML bean definitions from ServletContext resource [/WEB-INF/application-servlet.xml]
+2020-12-24 10:34:18,453   INFO --- [                             localhost-startStop-1]  org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor(line:   155)  :  JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2020-12-24 10:34:18,541   WARN --- [                             localhost-startStop-1]  org.springframework.web.context.support.XmlWebApplicationContext                (line:   550)  :  Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'movieRestApi': Unsatisfied dependency expressed through field 'recommenderService'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.atguigu.business.service.RecommenderService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2020-12-24 10:34:18,544  ERROR --- [                             localhost-startStop-1]  org.springframework.web.servlet.DispatcherServlet                               (line:   502)  :  Context initialization failed
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'movieRestApi': Unsatisfied dependency expressed through field 'recommenderService'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.atguigu.business.service.RecommenderService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:588)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:88)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:366)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1264)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:553)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:761)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:866)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:542)
+	at org.springframework.web.servlet.FrameworkServlet.configureAndRefreshWebApplicationContext(FrameworkServlet.java:668)
+	at org.springframework.web.servlet.FrameworkServlet.createWebApplicationContext(FrameworkServlet.java:634)
+	at org.springframework.web.servlet.FrameworkServlet.createWebApplicationContext(FrameworkServlet.java:682)
+	at org.springframework.web.servlet.FrameworkServlet.initWebApplicationContext(FrameworkServlet.java:553)
+	at org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:494)
+	at org.springframework.web.servlet.HttpServletBean.init(HttpServletBean.java:136)
+	at javax.servlet.GenericServlet.init(GenericServlet.java:160)
+	at org.apache.catalina.core.StandardWrapper.initServlet(StandardWrapper.java:1280)
+	at org.apache.catalina.core.StandardWrapper.loadServlet(StandardWrapper.java:1193)
+	at org.apache.catalina.core.StandardWrapper.load(StandardWrapper.java:1088)
+	at org.apache.catalina.core.StandardContext.loadOnStartup(StandardContext.java:5176)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5460)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1559)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1549)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.atguigu.business.service.RecommenderService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.raiseNoMatchingBeanFound(DefaultListableBeanFactory.java:1486)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1104)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1066)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:585)
+	... 31 more
